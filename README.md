@@ -3,17 +3,21 @@ Coalmine HTML5 JavaScript Connector
 
 Tested in Safari 5, Chrome, Firefox 3 and 11, and Internet Explorer 6-9.
 
+Download the latest connector, then add it to your application assets folder.
+
 The minimal HTML5 JavaScript connector setup is the following:
 
     <script src="/path/to/coalmine.min.js"></script>
     <script>
     coalmine.configure(function(config) {
-      config.signature = "your-app-signature-here";
+      config.signature = "your-signature";
       config.environment = "your-environment"; // e.g., "production"
     });
     </script>
 
-This will automatically catch *most*\* errors for Internet Explorer 5.5+, 
+Add this code as early as possible in your page execution.
+
+This will automatically catch *most*\* errors for Internet Explorer 6+, 
 Firefox, Safari, and Chrome.  If you'd like to be sure, wrap code that could 
 fail in a `try`...`catch` statement, like so:
 
@@ -32,7 +36,7 @@ these provide much more information when debugging.
     <script src="/path/to/coalmine.min.js"></script>
     <script>
     coalmine.configure(function(config) {
-      config.signature = "your-app-signature-here";
+      config.signature = "your-signature";
       config.environment = "...";
       config.ip_address = "...";
       config.method = "...";
