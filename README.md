@@ -9,6 +9,7 @@ The minimal HTML5 JavaScript connector setup is the following:
     <script>
     coalmine.configure(function(config) {
       config.signature = "your-app-signature-here";
+      config.environment = "your-environment"; // e.g., "production"
     });
     </script>
 

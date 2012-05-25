@@ -27,13 +27,13 @@ var coalmine = new function() {
   //     }
   //   });
   //
-  var URL_BASE = "http://:host:port/notify?signature=:signature&json=:json";
+  var URL_BASE = ":scheme://:host/notify?signature=:signature&json=:json";
   var IE_MAX_URL_LENGTH = 2048;
   var TRUNCATED_SEQ = "(...)"
   
   var config = new function() {
+    this.scheme = "https";
     this.host = "coalmineapp.com";
-    this.port = 80;
     this.enabledEnvironments = ["production", "staging"];
     this.signature = null;
     this.version = null;
@@ -170,8 +170,8 @@ var coalmine = new function() {
   // Creates a notification URL
   this.createUrl = function(error) {
     var url = URL_BASE;
+    url = url.replace(":scheme", config.scheme);
     url = url.replace(":host", config.host);
-    url = url.replace(":port", config.port == 80 ? "" : config.port);
     url = url.replace(":signature", config.signature);
     url = url.replace(":json", encodeURIComponent(JSON.stringify(error)));
     return url;
@@ -210,9 +210,14 @@ var coalmine = new function() {
       severity = additionalData.severity;
     }
     
+    var version = config.version;
+    if (version !== null) {
+      version = "" + version;
+    }
+    
     var notification = {
       // Application
-      "version": config.version + "",
+      "version": version,
       "app_environment": config.environment,
       
       // Request
