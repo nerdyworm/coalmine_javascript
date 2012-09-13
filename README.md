@@ -1,7 +1,17 @@
 JavaScript Connector for Coalmine
 =================================
 
+This connector allows you to easily send messages to the Coalmine API.
+
 Tested in Safari 5, Chrome, Firefox 3 and 11, and Internet Explorer 6-9.
+
+Source
+------
+
+You can always find the latest source code on [GitHub](https://github.com/coalmine/coalmine_javascript).
+
+Setup and Usage
+---------------
 
 Download the latest connector, then add it to your application assets folder.
 
