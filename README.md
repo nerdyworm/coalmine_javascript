@@ -1,11 +1,11 @@
-Coalmine HTML5 JavaScript Connector
-===================================
+JavaScript Connector for Coalmine
+=================================
 
 Tested in Safari 5, Chrome, Firefox 3 and 11, and Internet Explorer 6-9.
 
 Download the latest connector, then add it to your application assets folder.
 
-The minimal HTML5 JavaScript connector setup is the following:
+The minimal JavaScript connector setup is the following:
 
     <script src="/path/to/coalmine.min.js"></script>
     <script>
@@ -45,7 +45,7 @@ these provide much more information when debugging.
     });
     </script>
 
-By default, the HTML5 JavaScript connector will report errors for "production"
+By default, the JavaScript connector will report errors for "production"
 and "staging" environments.  To report for other environments ("beta", for 
 example), just add it to the `enabledEnvironments` array:
 
