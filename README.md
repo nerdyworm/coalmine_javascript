@@ -3,7 +3,12 @@ JavaScript Connector for Coalmine
 
 This connector allows you to easily send messages to the Coalmine API.
 
-Tested in Safari 5, Chrome, Firefox 3 and 11, and Internet Explorer 6-9.
+Tested in the following:
+
+* Safari 6 (Mac OS X)
+* Chrome (Windows, Mac OS X, Ubuntu)
+* Firefox 3 (Windows) and 11 (Windows, Mac OS X)
+* Internet Explorer 6-9 (Windows)
 
 Source
 ------
@@ -19,7 +24,7 @@ The minimal JavaScript connector setup is the following:
 
     <script src="/path/to/coalmine.min.js"></script>
     <script>
-    coalmine.configure(function(config) {
+    coalmine.configure(function (config) {
       config.signature = "your-signature";
       config.environment = "your-environment"; // e.g., "production"
     });
@@ -45,7 +50,7 @@ these provide much more information when debugging.
 
     <script src="/path/to/coalmine.min.js"></script>
     <script>
-    coalmine.configure(function(config) {
+    coalmine.configure(function (config) {
       config.signature = "your-signature";
       config.environment = "...";
       config.ip_address = "...";
@@ -60,7 +65,7 @@ and "staging" environments.  To report for other environments ("beta", for
 example), just add it to the `enabledEnvironments` array:
 
     <script>
-    coalmine.configure(function(config)) {
+    coalmine.configure(function (config)) {
       // ...other options...
       config.enabledEnvironments.push("beta");
     }
