@@ -13,7 +13,7 @@ Tested in the following:
 Source
 ------
 
-The only file you need is [coalmine.min.js](https://raw.github.com/coalmine/coalmine_javascript/master/coalmine.min.js).
+The only file you need is [coalmine.min.js](https://raw.github.com/coalmine/coalmine_javascript/master/coalmine.min.js) (11 KB).
 
 You can always find the latest source code on [GitHub](https://github.com/coalmine/coalmine_javascript).
 
