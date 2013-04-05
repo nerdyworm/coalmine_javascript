@@ -3,6 +3,8 @@ JavaScript Connector for Coalmine
 
 This connector allows you to easily send messages to the Coalmine API.
 
+[Coalmine](https://www.getcoalmine.com) is a cloud-based exception and error tracking service for your web apps.
+
 Tested in the following:
 
 * Safari 6 (Mac OS X)
