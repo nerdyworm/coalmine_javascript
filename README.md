@@ -102,10 +102,7 @@ Building
 
 From the root directory, run `./build.sh`.  This will produce four files:
 
-**coalmine.js** - JavaScript compiled from CoffeeScript
-
-**coalmine.map** - CoffeeScript => JavaScript source map
-
-**coalmine.min.js** - Minified JavaScript
-
-**coalmine.min.map** - JavaScript => minified JavaScript source map
+| coalmine.js      | JavaScript compiled from CoffeeScript        |
+| coalmine.map     | CoffeeScript => JavaScript source map        |
+| coalmine.min.js  | Minified JavaScript                          |
+| coalmine.min.map | JavaScript => minified JavaScript source map |
