@@ -26,9 +26,9 @@
      the environment.
  -->
 
-<link rel="stylesheet" href="qunit.css" type="text/css" media="screen" />
-<script src="jquery-1.7.1.min.js"></script>
-<script src="qunit.js"></script>
+<link rel="stylesheet" href="qunit-1.11.0.css" media="screen" />
+<script src="jquery-1.9.1.js"></script>
+<script src="qunit-1.11.0.js"></script>
 <script src="../coalmine.js"></script>
 <script>
 coalmine.configure(function(config) {
@@ -40,7 +40,7 @@ coalmine.configure(function(config) {
 </head>
 
 <body>
-<h1 id="qunit-header">Coalmine JavaScript Connector Test Suite</h1>
+<h1 id="qunit-header">JavaScript Connector for Coalmine - Test Suite</h1>
 <h2 id="qunit-banner"></h2>
 <div id="qunit-testrunner-toolbar"></div>
 <h2 id="qunit-userAgent"></h2>
@@ -53,15 +53,20 @@ missing1();
 </script>
 
 <!-- Test if parse error was intercepted -->
+<!--[if lt IE 7]>
 <script>
 test("Parse error is intercepted", function() {
-  if ($.browser.msie && $.browser.version < 7) {
-    ok(coalmine.hasMessage("Object expected"));
-  } else {
-    ok(coalmine.hasMessage("missing1"));
-  }
+  ok(coalmine.hasMessage("Object expected"));
 });
 </script>
+<![endif]-->
+<!--[if gte IE 7]><!-->
+<script>
+test("Parse error is intercepted", function() {
+  ok(coalmine.hasMessage("missing1"));
+});
+</script>
+<!--<![endif]-->
 
 <!-- Throw uncaught string exception -->
 <script>
@@ -69,15 +74,20 @@ throw "This is a string exception";
 </script>
 
 <!-- Test if uncaught string exception was intercepted -->
+<!--[if lt IE 9]>
 <script>
 test("Uncaught string exception is intercepted", function() {
-  if ($.browser.msie && $.browser.version < 7) {
-    ok(coalmine.hasMessage("Exception thrown and not caught"));
-  } else {
-    ok(coalmine.hasMessage("string exception"));
-  }
+  ok(coalmine.hasMessage("Exception thrown and not caught"));
 });
 </script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+<script>
+test("Uncaught string exception is intercepted", function() {
+  ok(coalmine.hasMessage("string exception"));
+});
+</script>
+<!--<![endif]-->
 
 <!-- Throw object exception and test if it was intercepted -->
 <script>
@@ -103,15 +113,20 @@ div.click(function() { missing2(); }).click().remove();
 </script>
 
 <!-- Test if parse error in an event handler was intercepted -->
+<!--[if lt IE 7]>
 <script>
 test("Parse error in an event handler is intercepted", function() {
-  if ($.browser.msie && $.browser.version < 7) {
-    ok(coalmine.hasMessage("Object expected"));
-  } else {
-    ok(coalmine.hasMessage("missing2"));
-  }
+  ok(coalmine.hasMessage("Object expected"));
 });
 </script>
+<![endif]-->
+<!--[if gte IE 7]><!-->
+<script>
+test("Parse error in an event handler is intercepted", function() {
+  ok(coalmine.hasMessage("missing2"));
+});
+</script>
+<!--<![endif]-->
 
 <!-- Test URL assembly -->
 <script>
