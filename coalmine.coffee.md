@@ -147,7 +147,7 @@ Sort the long parameters by weight descending (favoring user agent, stack trace,
             newLength = 0 if newLength < 0
             
 
-This isn't exact; because of URL encoding, the resulting URL will always be shorter than `IE_MAX_URL_LENGTH`.  Better safe than sorry!
+This isn't exact; because of URL encoding, the resulting URL will always be shorter than `MSIE_MAX_URL_LENGTH`.  Better safe than sorry!
 
 Also, we add a truncation sequence to the end of a truncated parameter to indicate that it has been truncated.  That way you don't have parameters that end suddenly without warni
 
