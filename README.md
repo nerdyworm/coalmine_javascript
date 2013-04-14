@@ -38,9 +38,9 @@ The minimal JavaScript connector setup is the following:
 
 Add this code as early as possible in your page execution.
 
-Many additional config options are available but must be populated manually (typically from the server side). We encourage you to use them if possible; these provide much more information when debugging.
-
 ### Application options
+
+Many additional config options are available but must be populated manually (typically from the server side). We encourage you to use them if possible; these provide much more information when debugging.
 
 | Option              | Type   | Description                              |
 | ------------------- | ------ | ---------------------------------------- |
